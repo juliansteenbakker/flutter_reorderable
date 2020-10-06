@@ -62,36 +62,37 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: _examples[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex, // this will be set when a new tab is tapped
-//        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.grid_on, color: _bottomNavigationColor),
-            title: Text('ReroderableTable', maxLines: 2, style: TextStyle(color: _bottomNavigationColor)),
+            label: 'ReorderableTable',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.apps, color: _bottomNavigationColor),
-            title: Text('ReroderableWrap', maxLines: 2, style: TextStyle(color: _bottomNavigationColor)),
+            label: 'ReorderableWrap',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.view_quilt, color: _bottomNavigationColor),
-            title: Text('Nested ReroderableWrap', maxLines: 3, style: TextStyle(color: _bottomNavigationColor)),
+            label: 'Nested ReroderableWrap',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.more_vert, color: _bottomNavigationColor),
-            title: Text('ReroderableColumn 1', maxLines: 2, style: TextStyle(color: _bottomNavigationColor))
+            label: 'ReroderableColumn 1',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.more_vert, color: _bottomNavigationColor),
-            title: Text('ReroderableColumn 2', maxLines: 2, style: TextStyle(color: _bottomNavigationColor))
+              label: 'ReroderableColumn 2',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.more_horiz, color: _bottomNavigationColor),
-            title: Text('ReroderableRow', maxLines: 2, style: TextStyle(color: _bottomNavigationColor))
+              label: 'ReroderableRow',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_view_day, color: _bottomNavigationColor),
-            title: Text('ReroderableSliverList', maxLines: 2, style: TextStyle(color: _bottomNavigationColor))
+              label: 'ReroderableSliverList',
           ),
         ],
         onTap: (int index) {

@@ -983,7 +983,6 @@ class _ReorderableWrapContentState extends State<_ReorderableWrapContent>
       Widget dragTarget = Stack(
 //        key: keyIndexGlobalKey,
 //        fit: StackFit.passthrough,
-        overflow: Overflow.clip,
         children: <Widget>[
           containedDraggable,
           Positioned(
@@ -1052,7 +1051,7 @@ class _ReorderableWrapContentState extends State<_ReorderableWrapContent>
       // Determine the size of the drop area to show under the dragging widget.
       Widget spacing = _draggingWidget == null
           ? SizedBox.fromSize(size: _dropAreaSize)
-          : Opacity(opacity: 0.2, child: _draggingWidget);
+          : Opacity(opacity: 0, child: _draggingWidget);
 //      Widget spacing = SizedBox.fromSize(size: _dropAreaSize, child: Container(color: Colors.red));
 
       if (_childRunIndexes[index] != -1 &&
